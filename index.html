@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NapTrack App</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="lib/fa.all.min.css" rel="stylesheet">
+    <link href="lib/animate.min.css" rel="stylesheet">
+    <link href="lib/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/sweetalert2.min.css" rel="stylesheet">
+    <link href="lib/aos.css" rel="stylesheet">
+    <link href="lib/hover-min.min.css" rel="stylesheet">
+    <link href="lib/scale.css" rel="stylesheet">
+    <link href="lib/light.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <h2>NapTrack</h2>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+        </header>
+        <main class="content">
+            <div class="sleep-buttons">
+                <button class="btn-sleep sleeping" onclick="startSleep()" id="startButton">
+                    <i class="fas fa-moon"></i>
+                    Uyuyorum
+                </button>
+                <button class="btn-sleep awake" onclick="endSleep()" id="endButton">
+                    <i class="fas fa-sun"></i>
+                    Uyandım
+                </button>
+            </div>
+            <div class="sleep-history" id="sleepHistory"></div>
+        </main>
+        <footer class="footer">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-3">
+                    <p class="mb-0">© Ufuayk</p>
+                    <div class="language-selector">
+                        <button class="lang-btn" onclick="setLanguage('en')" data-lang="en">EN</button>
+                        <button class="lang-btn" onclick="setLanguage('es')" data-lang="es">ES</button>
+                        <button class="lang-btn" onclick="setLanguage('pt')" data-lang="pt">PT</button>
+                        <button class="lang-btn" onclick="setLanguage('tr')" data-lang="tr">TR</button>
+                        <button class="lang-btn" onclick="setLanguage('it')" data-lang="it">IT</button>
+                        <button class="lang-btn" onclick="setLanguage('fr')" data-lang="fr">FR</button>
+                        <button class="lang-btn" onclick="setLanguage('sv')" data-lang="sv">SV</button>
+                    </div>
+                </div>
+                <button class="btn-reset" onclick="resetData()">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+        </footer>
+    </div>
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script src="lib/bootstrap.bundle.min.js"></script>
+    <script src="lib/sweetalert2.all.min.js"></script>
+    <script src="lib/moment.min.js"></script>
+    <script src="lib/tr.js"></script>
+    <script src="lib/aos.js"></script>
+    <script src="lib/gsap.min.js"></script>
+    <script src="lib/popper.min.js"></script>
+    <script src="lib/tippy-bundle.umd.min.js"></script>
+    <script src="languages.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
